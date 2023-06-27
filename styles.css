@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url("assets/fonts/roboto-regular-webfont.woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url("assets/fonts/roboto-regular-webfont.woff2");
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  --background-primary: hsl(30, 10%, 96%);
+  --color-primary: hsl(228, 12%, 8%);
+  --hover-clr: hsl(228, 12%, 40%);
+  transition: color 300ms, background-color 300ms;
+  background-color: var(--background-primary);
+  color: var(--color-primary);
+}
+
+html[data-theme="dark"] {
+  --background-primary: hsl(228, 12%, 8%);
+  --color-primary: hsl(30, 10%, 96%);
+  --hover-clr: hsla(0, 0%, 92%, 0.624);
+}
+
+.nav-item.light-mode-svg {
+  display: none;
+}
+
+html[data-theme="dark"] .nav-item.light-mode-svg {
+  display: flex;
+}
+
+html[data-theme="dark"] .nav-item.dark-mode-svg {
+  display: none;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+.nav-item img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.nav-item svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: var(--color-primary);
+}
+
+.nav-item svg:hover {
+  fill: hsl(191, 80%, 63%);
+  cursor: pointer;
+}
+
+/* Nav bar */
+a,
+a:visited {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.nav-item a:hover {
+  color: var(--hover-clr);
+   
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  transition: all 200ms ease-in;
+  font-size: 1.8rem;
+  font-family: "Roboto";
+  gap: 1.3rem;
+}
+
+.nav-item:first-child {
+  margin-right: auto;
+  margin-left: 1rem;
+}
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0 1.2rem;
+}
+
+.nav-item button {
+border: none;
+background: none;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+}
