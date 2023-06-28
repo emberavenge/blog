@@ -38,10 +38,12 @@ html[data-theme="dark"] {
 
 html[data-theme="dark"] .nav-item.light-mode-svg {
   display: flex;
+  fill: var(--color-primary);
 }
 
 html[data-theme="dark"] .nav-item.dark-mode-svg {
   display: none;
+  fill: var(--background-primary);
 }
 
 /* Remove default margin */
@@ -140,7 +142,6 @@ a:visited {
 
 .nav-item a:hover {
   color: var(--hover-clr);
-   
 }
 
 ul {
