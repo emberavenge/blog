@@ -24,16 +24,13 @@ html {
   transition: color 300ms, background-color 300ms;
   background-color: var(--background-primary);
   color: var(--color-primary);
+
 }
 
 html[data-theme="dark"] {
   --background-primary: hsl(228, 12%, 8%);
   --color-primary: hsl(30, 10%, 96%);
   --hover-clr: hsla(0, 0%, 92%, 0.624);
-}
-
-.nav-item.light-mode-svg {
-  display: none;
 }
 
 html[data-theme="dark"] .nav-item.light-mode-svg {
@@ -45,6 +42,10 @@ html[data-theme="dark"] .nav-item.dark-mode-svg {
   display: none;
   fill: var(--background-primary);
 }
+.nav-item.light-mode-svg {
+  display: none;
+}
+
 
 /* Remove default margin */
 body,
