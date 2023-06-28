@@ -36,12 +36,12 @@ html[data-theme="dark"] {
   display: none;
 }
 
-html[data-theme="light"] .nav-item.light-mode-svg {
+html[data-theme="dark"] .nav-item.light-mode-svg {
   display: flex;
 }
 
 html[data-theme="dark"] .nav-item.dark-mode-svg {
-  display: flex;
+  display: none;
 }
 
 /* Remove default margin */
